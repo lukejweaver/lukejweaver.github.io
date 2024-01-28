@@ -18,6 +18,11 @@ a {
   /* background-color: #293241; */
 }
 
+.research-container {
+  padding: 2rem;
+  box-shadow: rgb(173, 173, 173) 0px 1px 5px;
+}
+
 .summary-container {
 	position: absolute;
 	width: 100%;
@@ -97,6 +102,11 @@ a {
 
 .tc {
   text-align: center;
+}
+
+.tj {
+  text-justify: inter-word;
+  text-align: justify;
 }
 
 .tl {
@@ -327,6 +337,14 @@ a {
   margin-top: 2rem;
 }
 
+.times {
+  font-family: Times;
+}
+
+.mb15 {
+  margin-bottom: 1.5rem;
+}
+
 .pl1 {
   padding-left: 0.5rem;
 }
@@ -393,6 +411,14 @@ a {
 
 .f2 {
   font-size: 1.5rem;
+}
+
+/* .f1 {
+  font-size: 1rem;
+} */
+
+.f1 {
+  font-size: 1.2rem;
 }
 
 .h6 {
