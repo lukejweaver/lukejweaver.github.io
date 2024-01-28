@@ -2,6 +2,10 @@ html {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Times New Roman', Times, serif;
@@ -21,6 +25,15 @@ html {
   top: 1rem;
 	overflow-x: hidden;
 	z-index: -1;
+}
+
+.highlighter {
+  position: absolute;
+  top: -0.35rem;
+  width: 100%;
+  height: 75%;
+  opacity: 30%;
+  background-color: #ee6c4d;
 }
 
 #summary-color-sweep {
@@ -326,6 +339,10 @@ html {
   padding-left: 1.6rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-25 {
   width: 25%;
 }
@@ -399,11 +416,11 @@ html {
 }
 
 .bg-secondary-color {
-	background-color: #eec643ff;
+	background-color:#98c1d9;
 }
 
 .secondary-color {
-  color: #eec643ff;
+  color: #e0fbfc;
 }
 
 .items-center {
@@ -508,6 +525,10 @@ html {
 
 .w65 {
   width: 65rem;
+}
+
+.dib {
+  display: inline-block;
 }
 
 .flex {
