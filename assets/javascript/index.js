@@ -1,6 +1,8 @@
 function applyAnimations() {
   var idsToAnimate = {
-    'title': 'enter-bottom'
+    'title': 'enter-bottom',
+    'headshot': 'enter-left',
+    'brief': 'enter-right'
   }
 
   Object.keys(idsToAnimate).forEach(key => {
@@ -22,12 +24,10 @@ function scrollListener() {
 
   window.addEventListener('scroll', (event) =>  {
     var menuBar = document.getElementById('menu-bar');
-    if (window.scrollY > 0 && menuBar.style.boxShadow != 'rgb(197, 197, 197) 0px 2px 5px') {
-      menuBar.style.boxShadow = '0px 2px 5px rgb(197, 197, 197)';
-      menuBar.style.padding = '0.5rem';
-    } else if (window.scrollY == 0 && menuBar.style.boxShadow == 'rgb(197, 197, 197) 0px 2px 5px') {
-      menuBar.style.boxShadow = 'none';
+    if (window.scrollY > 0) {
       menuBar.style.padding = '1rem';
+    } else if (window.scrollY == 0) {
+      menuBar.style.padding = '1.5rem';
     }
 
     applyAnimations();

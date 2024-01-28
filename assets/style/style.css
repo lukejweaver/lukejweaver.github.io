@@ -3,17 +3,37 @@ html {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0rem;
   padding: 0rem;
   display: flex;
   flex-direction: column;
+  /* background-color: #293241; */
+}
+
+.summary-container {
+	position: absolute;
+	width: 100%;
+	left: 0rem;
+  top: 1rem;
+	overflow-x: hidden;
+	z-index: -1;
+}
+
+#summary-color-sweep {
+  position: relative;
+  /* background-color: #ee6c4d; */
+  background-color: #293241;
+	height: 10rem;
+  width: 100%;
+	position: relative;
 }
 
 #background-color-sweep {
-	background-color: #011638ff;
+	background-color: #293241;
 	height: 50rem;
 	width: 1000rem;
 	transform: rotate(-1deg);
@@ -64,6 +84,10 @@ html {
 
 .tc {
   text-align: center;
+}
+
+.tl {
+  text-align: left;
 }
 
 
@@ -196,7 +220,7 @@ html {
 
 .left-primary-border {
   border-left: solid;
-  border-color: #011638ff;
+  border-color: #293241;
   border-width: 2px;
 }
 
@@ -235,21 +259,21 @@ html {
 }
 
 .menu-title {
-	color: #011638ff;
-	font-size: 1.5rem;
+	color: #293241;
+	font-size: 1rem;
 	font-weight: 600;
 	text-decoration: none;
 	transition: color 200ms;
 }
 
 .primary-color {
-  color: #011638ff;
+  color: #293241;
 }
 
 .menu-title-link {
-	color: #011638ff;
-	font-size: 1.5rem;
-	font-weight: 600;
+	color: #293241;
+	font-size: 1rem;
+	font-weight: 700;
 	text-decoration: none;
 	transition: color 200ms;
 }
@@ -362,12 +386,16 @@ html {
 	width: 48rem;
 }
 
+.pa1 {
+	padding: 1rem;
+}
+
 .pa2 {
 	padding: 2rem;
 }
 
 .bg-primary-color {
-	background-color: #011638ff;
+	background-color: #293241;
 }
 
 .bg-secondary-color {
@@ -399,7 +427,7 @@ html {
 }
 
 .title {
-	color: #011638ff;
+	color: #293241;
 	font-size: 3rem;
 	font-weight: 600;
 }
@@ -507,7 +535,7 @@ html {
 }
 
 .tag-1 {
-	color: #011638ff;
+	color: #293241;
 	font-weight: 600;
 	font-size: 3.5rem;
 }
@@ -755,7 +783,7 @@ font-weight: 600;
 
 
 #background-color-sweep-octary {
-	background-color: #011638ff;
+	background-color: #293241;
 	height: 18rem;
 	width: 18rem;
 	border-radius: 100%;
@@ -1025,11 +1053,11 @@ font-weight: 600;
   }
 
   .background-primary-small {
-    background-color: #011638ff;
+    background-color: #293241;
   }
 
   .primary-color-small {
-    color: #011638ff;
+    color: #293241;
   }
 
   .w-70-small {

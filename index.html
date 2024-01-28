@@ -1,14 +1,39 @@
 <!DOCTYPE html>
     <head>
         <script src="./assets/javascript/index.js"></script>
+        <script src="./assets/javascript/menuBarResize.js"></script>
         <link rel="stylesheet" media="all" href="./assets/style/style.css" type="text/css" />
         <title>
-            Luke's Website
+            Luke Weaver
         </title>
     </head>
 
     <body id="app">
 
-        <h1 id="title" class="primary-color tc">Just a visionary | husband | grandpa | roommate</h1>
+        <div id="menu-bar">
+            <span><span class="menu-title">luke weaver</span><span>&nbsp;&#x2022;&nbsp;aspiring physicist</span></span>
+            <span>
+                <span class="menu-title-link pointer">about</span>&nbsp;&nbsp;
+                <span class="menu-title-link pointer">publications</span>&nbsp;&nbsp;
+                <span class="menu-title-link pointer">research</span>&nbsp;&nbsp;
+                <span class="menu-title-link pointer">cv</span>&nbsp;&nbsp;
+                <span class="menu-title-link pointer">contact</span>&nbsp;&nbsp;
+            </span>
+        </div>
+
+        <div class="relative">
+            <div class="summary-container">
+                <div id="summary-color-sweep"></div>
+            </div>
+
+            <div class="flex tc w-100 justify-center mt2">
+                <img height="200" width="230" class="mr2 primary-br" src="./assets/images/luke_headshot.jpg" id="headshot"/>
+
+                <div>
+                    <div id="title" class="tl f3 white fw6">Luke Weaver</div>
+                    <div id="brief" class="tl white f2">Undergraduate at Lehigh University,<br>studying condensed matter physics</div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
