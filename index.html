@@ -15,10 +15,11 @@
             <span>
                 <a href="#about"><span class="menu-title-link pointer">about</span></a>&nbsp;&nbsp;
                 <a href="#research"><span class="menu-title-link pointer">research</span></a>&nbsp;&nbsp;
-                <span class="menu-title-link pointer">cv</span>&nbsp;&nbsp;
+                <a href="#cv-container"><span class="menu-title-link pointer">cv</span></a>&nbsp;&nbsp;
                 <span class="menu-title-link pointer">projects</span>&nbsp;&nbsp;
                 <span class="menu-title-link pointer">contact</span>&nbsp;&nbsp;
                 <span class="menu-title-link pointer">publications</span>&nbsp;&nbsp;
+                <span class="menu-title-link pointer">reading list</span>&nbsp;&nbsp;
             </span>
         </div>
 
@@ -39,7 +40,7 @@
             <!-- <div class="content-spacer"></div> -->
 
             <div class="flex justify-center">
-                <div class="body-content">
+                <div class="body-content bg-white">
                     <div id="about">
                         <div>
                             <div class="primary-color f3 fw6 relative dib w-auto">
@@ -66,47 +67,165 @@
                     <div class="content-spacer">
                     </div>
 
-                    <!-- <div id ="research">
-                        <div class="flex justify-end">
-                            <div class="primary-color f3 fw6 relative dib w-auto">
-                                <div class="highlighter"></div>
-                                My Research
-                            </div>
-                        </div>
-
-                        <div class="content-spacer">
-                        </div>
-                    </div> -->
-
                     <div id="research" class="research-container times">
                         <div class="tc">
                             <div class="f2 fw6 mb15">Research</div>
                             <div class="f1">Luke Weaver</div>
-                            <div><i>Department of Physics, Lehigh University, Bethlehem, PA 18018, USA</i> <br/>(Dated: January 25, 2024)</div>
+                            <div><i>Department of Physics, Lehigh University, Bethlehem, PA 18015, USA</i> <br/>(Dated: <span id="abstract-date"></span>)</div>
                         </div>
 
                         <div class="flex justify-center mt1">
                             <div class="w-70 tj">
-                                I have researched at several institutions, namely <i>Lehigh University</i>, the <i>Singapore University of Technology and Design</i>, and <i>CERN</i>. Consequently, I developed a broad array of
+                                &emsp;I have researched at several institutions including <i>Lehigh University</i>, the <i>Singapore University of Technology and Design</i>, and <i>CERN</i>. Consequently, I developed a broad array of
                                 skills that are particularly useful in research, including data analysis, physical vapor deposition, optical alignment/laser usage, cryogenics, and hardware-level programming. I intend to continue
                                 my research journey, learning as much as I can.
                             </div>
                         </div>
 
-                        <div class="flex justify-center mt15">
+                        <div class="flex justify-center mt2 tj">
                             <!-- Col 1 -->
-                            <div>
+                            <div class="w-40 mr2 z-1">
+                                <div class=""><span class="f1 fw6 ">Quantum Beats in Crystalline Rubrene</span></div>
+                                <div class="mb1"><a href=""><span class="primary-link pointer">Paper</span></a></div>
+
+                                I work with a group of incredible people at <i>Lehigh University</i> under the watchful eye of Dr. Ivan Biaggio. We study
+                                quantum phenomena in crystalline rubrene, namely a phenomenon known as <span class="text-highlighter" id="highlight-1">quantum beats</span>. Rubrene exhibits interesting effects
+                                which are pretty unexpected. We are working to explain them.
+                                <br>&emsp;During this project, I have become familiar with physical vapour deposition, optical alignment, laser usage,
+                                real world applications of quantum mechanics, and photonics.
+                                <div class="mt1"><span class="f1 fw6">Slosh Measuring System for Liquid Carrying Robots</span></div>
+                                <div class="mb1"><a href=""><span class="primary-link pointer">Paper</span></a></div>
+
+                                At the <i>Singapore University of Technology and Design</i> I worked to develop a system to measure the influence of locomotion on
+                                liquids in omnidirectional robots. Then, I utilized <span class="text-highlighter" id="highlight-2">Delaunay Triangulation</span> and <span class="text-highlighter" id="highlight-3">cubic spline interpolation</span> to model the surface of the liquid
+                                using the experimental data.
+                                <br>&emsp; To achieve this goal, I wrote hardware-level code for communication between the microcontrollers and sensor devices, including the implementation of Serial, Bluetooth,
+                                and I2C protocols. Additionally, I created monitoring tools for real-time data collection and analysis.
                             </div>
 
                             <!-- Col2 -->
-                            <div>
+                            <div class="w-40 ml2">
+                                <img class="primary-br w-100" src="./assets/images/BlockDiagram.png" id="blockdiagram"/>
+
+                                <div class="mb1 mt1"><span class="f1 fw6">H6 Secondary Beamline Focusing at CERN</span></div>
+
+                                <i>In Progress</i>
                             </div>
                         </div>
 
                     </div>
-
-
                 </div>
+            </div>
+
+            <div id="cv-container" class="relative h-100 bg-tertiary">
+                <div id="folder">
+                </div>
+
+                <div class="folder-tab-back">
+                </div>
+<!--
+                <div class="flex justify-center">
+                    <div class="body-content">
+                        <div class="primary-color f3 fw6 relative dib w-auto">
+                            <div class="highlighter"></div>
+                            Curriculum Vitae
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="paper-wrapper">
+                    <div class="flex justify-center">
+                        <div id="cv" class="research-container bg-white body-content o0">
+                            <div class="tc mt2">
+                                <div class="f2 fw6 mb15">Curriculum Vitae</div>
+                                <div class="f1">Luke Weaver</div>
+
+                                It is important to note that these lecture notes, are {\bf not} a substitute for the literature that exists. In general, they will contain a brief synopsis of the theory presented, when relevant, and several features to help guide the experimental process. Included in these features are guiding questions and keywords designed to facilitate further exploration of a topic and to provide you with a starting point to catalyze the experimentation process. The frequency and overt nature of these questions/keywords will decrease as the class progresses, in favor of your own development of these questions. In general, it is helpful to sit with a new topic before beginning any "exciting" things and create a list of questions that may pop into your head, or conduct a brief survey of the topic to familiarize yourself with its ins and outs.
+
+                                Additionally, you will notice that the format of these notes is a little strange. Namely, there exists a larger than average right margin. The idea behind this is that it provides you with a natural place to place any questions, comments, or notes from the short weekly lectures.
+
+                                One last note before we begin. Amongst the individuals in the class, there is often a large variation with respect to knowledge and skillset. It is important to recognize this and to ask others for help/offer help when necessary. Scientific inquiry is bolstered by community and humility.
+
+                                \pagebreak
+
+                                \section{Week 1}
+
+                                Throughout this course, we will use many different tools, including \LaTeX, LabView, and your choice of programming language (with a heavy emphasis on Python of course). So, for the first week, we will focus on installing the necessary programs and packages to tackle this semester.
+
+                                \subsection{Python}
+
+                                \subsection{Arduino IDE}
+
+                                \subsection{\LaTeX}
+                                \LaTeX \space is a markup language that is used in science communication and in general writing. It provides tools that make writing equations and formatting documents easy. During this class, you will become familiar with using \LaTeX.
+
+                                \subsubsection{Web Application}
+                                One of the easiest ways to get started with \LaTeX \space is through the online web application {\it Overleaf}. Thanks to Lehigh, we all have access to the professional version as long as you create an account with your Lehigh University email. It provides access to various packages and templates, that you do not need to install.
+
+                                \subsubsection{Local Installations}
+                                If you would like to learn \LaTeX a little better, one can use a local installation. For Mac, I would recommend {\it Texifier}. The free version works well enough for all intents and purposes. Alternatively, one can navigate to http://latex-project.org and download the relevant \TeX \space distributions for your device.
+
+
+                                \subsection{LabView (Optional)}
+
+                                \end{document}
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="paper3" class="research-container bg-white paper paper-3-coords o0">
+                        <div class="tc mt2">
+                            <div class="f2 fw6 mb15">General Relativity Notes</div>
+                            <div class="f1">Luke Weaver</div>
+                        </div>
+                    </div>
+                    <div id="paper2" class="research-container bg-white paper paper-2-coords o0">
+                        <div class="tc mt2">
+                            <div class="f2 fw6 mb15">Nonlinear Optics Notes</div>
+                            <div class="f1">Luke Weaver</div>
+                        </div>
+                    </div>
+                    <div id="paper1" class="research-container bg-white paper paper-1-coords o0">
+                        <div class="tc mt2">
+                            <div class="f2 fw6 mb15">Advanced Physics Lab I - Lecture Notes</div>
+                            <div class="f1">AT - Luke Weaver</div>
+                        </div>
+                        <div class="flex justify-center mt2 tj">
+                            <div class="w-40 mr2">
+                                <div class=""><span class="f1 fw6 ">I. Preface</span></div>
+
+                                Hello and welcome to  <i>Advanced Physics Lab I</i>.
+                                This course has one main goal in mind: <i>discovery</i>.
+                                Of course, the heart of physics is the desire to discover and seek new and exciting things.
+                                Unfortunately, one can have a hard time truly embracing this ideal, it's not how the school system is oriented after all.
+                                As a result, this course will be unlike the others that you have taken, placing an emphasis on individual and group efforts to solve problems.
+
+                                It is worth making these differences concrete in an effort to temper your expectations for the upcoming semester.
+                                This lab differs in quite a few ways from your generic lab.
+                            </div>
+
+                            <div class="w-40 ml2">
+                                <div class="mb1"><span class="f1 fw6 ">I.II How To Use The Lecture Notes</span></div>
+
+                                It is important to note that these lecture notes, are <b>not</b> a substitute for the literature that exists. In general, they will contain a brief synopsis of the theory presented, when relevant, and several features to help guide the experimental process. Included in these features are guiding questions and keywords designed to facilitate further exploration of a topic and to provide you with a starting point to catalyze the experimentation process. The frequency and overt nature of these questions/keywords will decrease as the class progresses, in favor of your own development of these questions. In general, it is helpful to sit with a new topic before beginning any "exciting" things and create a list of questions that may pop into your head, or conduct a brief survey of the topic to familiarize yourself with its ins and outs.
+
+                                <br>&emsp;Additionally, you will notice that the format of these notes is a little strange. Namely, there exists a larger than average right margin. The idea behind this is that it provides you with a natural place to place any questions, comments, or notes from the short weekly lectures.
+
+                                <br>&emsp;One last note before we begin. Amongst the individuals in the class, there is often a large variation with respect to knowledge and skillset. It is important to recognize this and to ask others for help/offer help when necessary. Scientific inquiry is bolstered by community and humility.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-spacer">
+            </div>
+
+            <div clas="flex justify-center">
+                Test
             </div>
         </div>
     </body>

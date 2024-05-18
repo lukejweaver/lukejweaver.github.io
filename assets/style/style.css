@@ -23,6 +23,92 @@ a {
   box-shadow: rgb(173, 173, 173) 0px 1px 5px;
 }
 
+/* coords */
+
+.paper-1-coords {
+  position: absolute;
+  width: 50rem;
+  height: 65rem;
+  top: 10rem;
+  right: 40rem;
+  transform: rotate(-39deg);
+  z-index: -1;
+}
+
+.paper-2-coords {
+  position: absolute;
+  width: 50rem;
+  height: 65rem;
+  top: 10rem;
+  right: 25rem;
+  transform: rotate(-28deg);
+  z-index: -2;
+}
+
+.paper-3-coords {
+  position: absolute;
+  width: 50rem;
+  height: 65rem;
+  top: 10rem;
+  right: -5rem;
+  transform: rotate(-12deg);
+  z-index: -3;
+}
+
+.paper-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: clip;
+  z-index: 1;
+}
+
+#cv {
+  z-index: 1;
+  height: 50rem
+}
+
+#folder {
+  background-color: #98c1d9;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  top: -1.5rem;
+}
+
+.folder-tab-back {
+  background-color: #98c1d9;
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  z-index: -5;
+  top: -3.5rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+
+}
+
+/* Adds a little curve to the tab but I am not sure if it is needed */
+/*
+.folder-tab-back::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: -50px;
+  height: 25px;
+  top: 0.4rem;
+  right: -2.5rem;
+  width: 50px;
+  z-index: 5;
+  border-bottom-left-radius: 25px;
+  box-shadow: 0 10px 0 0 #66a7cc;
+} */
+
+.bg-tertiary {
+  background-color: #66a7cc;
+}
+
 .summary-container {
 	position: absolute;
 	width: 100%;
@@ -39,6 +125,13 @@ a {
   height: 75%;
   opacity: 30%;
   background-color: #ee6c4d;
+}
+
+.text-highlighter {
+  background-image: linear-gradient(to right, rgb(252, 255, 50, 0.5), rgb(252, 255, 50, 0.5));
+  background-repeat: no-repeat;
+  background-size: 0%;
+  background-position: 0px -0.4rem;
 }
 
 #summary-color-sweep {
@@ -235,6 +328,10 @@ a {
 	z-index: 1;
 }
 
+.z--1 {
+  z-index: -1;
+}
+
 .left-white-border {
   border-left: solid;
   border-color: white;
@@ -305,6 +402,18 @@ a {
 	color: rgba(1, 22, 56, 0.7);
 }
 
+.primary-link {
+	color: #e8360a;
+	font-size: 1rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: color 200ms;
+}
+
+.primary-link:hover {
+	color: #ee6c4d;
+}
+
 .mr1 {
 	margin-right: 0.5rem;
 }
@@ -329,6 +438,11 @@ a {
 	margin-left: 2rem;
 }
 
+/* Really shouldnt use important here but alas */
+.mt0 {
+  margin-top: 0rem !important;
+}
+
 .mt1 {
 	margin-top: 1rem;
 }
@@ -341,6 +455,10 @@ a {
   font-family: Times;
 }
 
+.mb1 {
+  margin-bottom: 1rem;
+}
+
 .mb15 {
   margin-bottom: 1.5rem;
 }
@@ -351,6 +469,10 @@ a {
 
 .pl3 {
   padding-left: 2rem;
+}
+
+.pr1 {
+  padding-right: 1.5rem;
 }
 
 .list-padding {
@@ -377,6 +499,10 @@ a {
   width: 40%;
 }
 
+.w-45 {
+  width: 45%;
+}
+
 .w3r {
   width: 3rem;
 }
@@ -393,8 +519,20 @@ a {
   width: 100%;
 }
 
+.w-90 {
+  width: 80%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
 .w-70 {
   width: 70%;
+}
+
+.w-body {
+  width: 65rem;
 }
 
 .white {
@@ -421,8 +559,20 @@ a {
   font-size: 1.2rem;
 }
 
+.h7 {
+	height: 32rem;
+}
+
 .h6 {
 	height: 16rem;
+}
+
+.h5 {
+  height: 8rem;
+}
+
+.h4 {
+  height: 4rem;
 }
 
 .w7 {
@@ -443,6 +593,10 @@ a {
 
 .bg-secondary-color {
 	background-color:#98c1d9;
+}
+
+.bg-white {
+  background-color: white;
 }
 
 .secondary-color {
@@ -585,30 +739,6 @@ a {
 	color: #293241;
 	font-weight: 600;
 	font-size: 3.5rem;
-}
-
-.primary-link {
-font-weight: 600;
-  color: black;
-  display: inline-block;
-  border: none;
-  padding: 0.5rem;
-  padding-right: 2.5rem;
-  text-decoration: none;
-  background-color: #eec643ff;
-  border-radius: 0.4rem;
-  font-family: sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 250ms ease-in-out;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.primary-link:hover {
-  background-color: #ffd754ff;
 }
 
 .right-arrow-container {
@@ -936,6 +1066,36 @@ font-weight: 600;
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .draw-in-left {
+    animation: draw-in-left 0.5s 1 ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter-right-toss-1 {
+    animation: enter-right-toss-1 0.8s 1 cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter-right-toss-2 {
+    animation: enter-right-toss-2 0.7s 1 cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter-right-toss-3 {
+    animation: enter-right-toss-3 0.5s 1 cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter-right-toss-4 {
+    animation: enter-right-toss-4 0.75s 1 cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
 	.enter-top {
 	  animation: enter-top 1.5s 1;
 	}
@@ -1005,6 +1165,52 @@ font-weight: 600;
     opacity: 100%;
 	}
 }
+
+@keyframes draw-in-left {
+	0% {
+		background-size: 0%;
+	}
+	100% {
+		background-size: 100%;
+	}
+}
+
+@keyframes enter-right-toss-1 {
+	0% {
+		transform: translateX(50rem) translateY(10rem) rotate(-12deg);
+	}
+	100% {
+		transform: translateX(0rem) translateY(0rem) rotate(-39deg);
+	}
+}
+
+@keyframes enter-right-toss-2 {
+	0% {
+		transform: translateX(35rem) translateY(10rem) rotate(-12deg);
+	}
+	100% {
+		transform: translateX(0rem) translateY(0rem) rotate(-28deg);
+	}
+}
+
+@keyframes enter-right-toss-3 {
+	0% {
+		transform: translateX(8rem) translateY(5rem) rotate(-12deg);
+	}
+	100% {
+		transform: translateX(0rem) translateY(0rem) rotate(-12deg);
+	}
+}
+
+@keyframes enter-right-toss-4 {
+	0% {
+		transform: translateX(95rem) translateY(15rem) rotate(-12deg);
+	}
+	100% {
+		transform: translateX(0rem) translateY(0rem) rotate(0deg);
+	}
+}
+
 
 @keyframes grow {
 	0% {
