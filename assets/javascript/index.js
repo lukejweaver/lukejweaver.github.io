@@ -9,7 +9,8 @@ var idsToAnimate = {
   'paper3': ['enter-right-toss-3', paperOffset - 71],
   'cv': ['enter-right-toss-4', paperOffset - 150],
   'journal-1': ['enter-bottom'],
-  'journal-2': ['enter-bottom']
+  'journal-2': ['enter-bottom'],
+  'journal-3': ['enter-bottom']
 }
 
 var highlightToAnimate = [
