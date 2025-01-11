@@ -30,7 +30,6 @@ const lightblue = "#8AD7F4";
 
 function addRows() {
   for (let i = 0; i < schoolList.length; i++) {
-    console.log(schoolList[i]);
     // Cell 1: Name
     const cell1 = document.createElement("td");
     const node1 = document.createTextNode(schoolList[i]["name"]);
