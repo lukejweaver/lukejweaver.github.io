@@ -1,0 +1,10 @@
+table, th, td {
+    border: 1px solid;
+    text-align: left;
+	border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+#header {
+    background: #ed8d75;
+}
