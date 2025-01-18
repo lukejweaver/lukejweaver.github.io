@@ -11,7 +11,7 @@ const schoolList = [
   {name: "Boulder", status: "Submitted", details: ""},
   {name: "Yale", status: "Submitted", details: ""},
   {name: "UMich", status: "Submitted", details: ""},
-  {name: "Dartmouth", status: "Invitation to Interview 1/14", details: ""},
+  {name: "Dartmouth", status: "Interview 1/17", details: "Went well. Should hear back by Feb 1st."},
   {name: "University of Iowa", status: "Submitted", details: ""},
   {name: "Northwestern", status: "Submitted", details: ""},
   {name: "Lehigh", status: "Submitted", details: ""},
