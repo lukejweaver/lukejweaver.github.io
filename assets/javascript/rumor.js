@@ -2,7 +2,7 @@ const schoolList = [
   {name: "MIT", status: "Interview 1/10", details: "Interview went okay. Awaiting results."},
   {name: "Stanford", status: "Submitted", details: ""},
   {name: "UCSB", status: "Submitted", details: ""},
-  {name: "UCSD", status: "Informally Accepted 1/19", details: "I got the information that I am being recommended to the Graduate Office."},
+  {name: "UCSD", status: "Recommended to Graduate Office 1/19", details: "I got the information that I am being recommended to the Graduate Office."},
   {name: "CalTech", status: "Submitted", details: ""},
   {name: "Princeton", status: "Submitted", details: ""},
   {name: "Berkeley", status: "Submitted", details: ""},
@@ -42,7 +42,7 @@ function addRows() {
     const node2 = document.createTextNode(node2Text);
 
     let node2BgColor;
-    if (node2Text.includes("Interview")) {
+    if (node2Text.includes("Interview") || node2Text.includes("Recommended")) {
       node2BgColor = yellow;
     } else if (node2Text.includes("Accepted")) {
       node2BgColor = green;
