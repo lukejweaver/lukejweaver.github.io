@@ -2,7 +2,7 @@ const schoolList = [
   {name: "MIT", status: "Interview 1/10", details: "Interview went okay. Awaiting results."},
   {name: "Stanford", status: "Submitted", details: ""},
   {name: "UCSB", status: "Submitted", details: ""},
-  {name: "UCSD", status: "Submitted", details: ""},
+  {name: "UCSD", status: "Informal Acceptance 1/19", details: "I got the information that I am being recommended to the Graduate Office."},
   {name: "CalTech", status: "Submitted", details: ""},
   {name: "Princeton", status: "Submitted", details: ""},
   {name: "Berkeley", status: "Submitted", details: ""},
