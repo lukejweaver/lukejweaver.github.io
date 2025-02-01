@@ -9,7 +9,7 @@ const schoolList = [
   {name: "CalTech", status: "Submitted", details: ""},
   {name: "Princeton", status: "Submitted", details: ""},
   {name: "Berkeley", status: "Submitted", details: ""},
-  {name: "UChicago", status: "Submitted", details: ""},
+  {name: "UChicago", status: "Rejected 1/28", details: ":("},
   {name: "Columbia", status: "Submitted", details: ""},
   {name: "Boulder", status: "Submitted", details: ""},
   {name: "Yale", status: "Submitted", details: ""},
