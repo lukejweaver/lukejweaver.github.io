@@ -1,10 +1,10 @@
 const schoolList = [
-  {name: "University of Wisconsin", status: "Accepted 1/23", details: "Email confirming that I was accepted. Will update with offer information."},  
-  {name: "Northwestern", status: "Recommended To Graduate Office 1/22", details: "Got informed that I am being recommended to the Graduate Office - (Most likely to attend)"},
+  {name: "Stanford", status: "Accepted 1/31", details: "Nothng else to say accept that I am stoked - (Most likely to attend) -"},  
+  {name: "University of Wisconsin -- Madison", status: "Accepted 1/23", details: "Email confirming that I was accepted. Will update with offer information."},  
+  {name: "Dartmouth", status: "Accepted 1/28", details: "WOOOOOWWW"},  
+  {name: "Northwestern", status: "Recommended To Graduate Office 1/22", details: "Got informed that I am being recommended to the Graduate Office"},
   {name: "UCSD", status: "Recommended to Graduate Office 1/19", details: "I got the information that I am being recommended to the Graduate Office."},  
-  {name: "Dartmouth", status: "Interview 1/17", details: "Went well. Should hear back by Feb 1st."},  
   {name: "MIT", status: "Interview 1/10", details: "Interview went okay. Awaiting results."},
-  {name: "Stanford", status: "Submitted", details: ""},
   {name: "UCSB", status: "Submitted", details: ""},
   {name: "CalTech", status: "Submitted", details: ""},
   {name: "Princeton", status: "Submitted", details: ""},
@@ -15,18 +15,19 @@ const schoolList = [
   {name: "Yale", status: "Submitted", details: ""},
   {name: "UMich", status: "Submitted", details: ""},
   {name: "University of Iowa", status: "Submitted", details: ""},
-  {name: "Lehigh", status: "Submitted", details: ""},
   {name: "University of Maryland", status: "Submitted", details: ""},
   {name: "University of Washington - Seattle", status: "Submitted", details: ""},
   {name: "Boston University", status: "Submitted", details: ""},
   {name: "Boston College", status: "Submitted", details: ""},
-  {name: "UCR", status: "Submitted", details: ""},
+  {name: "Lehigh", status: "Withdrawn", details: ""},  
+  {name: "UCR", status: "Withdrawn", details: ""},
 ]
 
 const yellow = "#FFEF65";
 const red = "#FF6565";
 const green = "#90FF6C";
 const lightblue = "#8AD7F4";
+const orange = "#FFA500";
 
 function addRows() {
   for (let i = 0; i < schoolList.length; i++) {
@@ -48,6 +49,8 @@ function addRows() {
       node2BgColor = green;
     } else if (node2Text.includes("Rejected")) {
       node2BgColor = red;
+    } else if (node2Text.includes("Withdrawn")) {
+      node2BgColor = orange;
     } else {
       node2BgColor = lightblue;
     }
