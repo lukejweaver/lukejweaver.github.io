@@ -1,7 +1,7 @@
 const schoolList = [
-  {name: "Stanford", status: "Accepted 1/31", details: "Nothng else to say accept that I am stoked - (Most likely to attend) -"},  
+  {name: "Stanford", status: "Accepted 1/31", details: "AHHHHHHHHH!! Got an email telling me to check the portal. Nothing else to say except that I am stoked -- (Most likely to attend)"},  
   {name: "University of Wisconsin -- Madison", status: "Accepted 1/23", details: "Email confirming that I was accepted. Will update with offer information."},  
-  {name: "Dartmouth", status: "Accepted 1/28", details: "WOOOOOWWW"},  
+  {name: "Dartmouth", status: "Accepted 1/28", details: "Email telling me to check the portal."},  
   {name: "Northwestern", status: "Recommended To Graduate Office 1/22", details: "Got informed that I am being recommended to the Graduate Office"},
   {name: "UCSD", status: "Recommended to Graduate Office 1/19", details: "I got the information that I am being recommended to the Graduate Office."},  
   {name: "MIT", status: "Interview 1/10", details: "Interview went okay. Awaiting results."},
