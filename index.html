@@ -1,8 +1,9 @@
 <!DOCTYPE html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" media="all" href="./assets/style/style.css" type="text/css" />
         <script src="./assets/javascript/index.js"></script>
         <script src="./assets/javascript/menuBarResize.js"></script>
-        <link rel="stylesheet" media="all" href="./assets/style/style.css" type="text/css" />
         <title>
             Luke Weaver
         </title>
@@ -11,7 +12,7 @@
     <body id="app">
 
         <div id="menu-bar">
-            <span><span class="menu-title fw6">luke weaver</span><span>&nbsp;&#x2022;&nbsp;aspiring physicist</span></span>
+            <span><span class="menu-title fw6">luke weaver</span><span>&nbsp;&#x2022;&nbsp;physics phd student</span></span>
             <span>
                 <a href="#about"><span class="menu-title-link pointer">about</span></a>&nbsp;&nbsp;
                 <a href="#research"><span class="menu-title-link pointer">research</span></a>&nbsp;&nbsp;
@@ -33,7 +34,7 @@
 
                 <div>
                     <div id="title" class="tl f3 white fw6">Luke Weaver</div>
-                    <div id="brief" class="tl white f2">Undergraduate at Lehigh University -<br>studying condensed matter physics</div>
+                    <div id="brief" class="tl white f2">Physics PhD student at Stanford University -<br>studying condensed matter physics</div>
                 </div>
             </div>
 
@@ -67,50 +68,191 @@
                     <div class="content-spacer">
                     </div>
 
-                    <div id="research" class="research-container times">
-                        <div class="tc">
-                            <div class="f2 fw6 mb15">Research</div>
-                            <div class="f1">Luke Weaver</div>
-                            <div><i>Department of Physics, Lehigh University, Bethlehem, PA 18015, USA</i> <br/>(Dated: <span id="abstract-date"></span>)</div>
-                        </div>
+                    <div class="research-height times">
+                        <div id="research-previous-page" class="research-prev-page">
+                            <div class="flex justify-between">
+                                <div>
+                                    <button class="chevron-button research-back" value="-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M169.4 297.4C156.9 309.9 156.9 330.2 169.4 342.7L361.4 534.7C373.9 547.2 394.2 547.2 406.7 534.7C419.2 522.2 419.2 501.9 406.7 489.4L237.3 320L406.6 150.6C419.1 138.1 419.1 117.8 406.6 105.3C394.1 92.8 373.8 92.8 361.3 105.3L169.3 297.3z"/></svg></button>
+                                </div>
+                                <div>
+                                    <button class="chevron-button research-next" value="1"><svg viewBox="0 0 640 640" width="100%" height="100%"><path d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg></button>
+                                </div>
+                            </div>
 
-                        <div class="flex justify-center mt1">
-                            <div class="w-70 tj">
-                                &emsp;I have researched at several institutions including <i>Lehigh University</i>, the <i>Singapore University of Technology and Design</i>, and <i>CERN</i>. Consequently, I developed a broad array of
-                                skills that are particularly useful in research, including data analysis, physical vapor deposition, optical alignment/laser usage, cryogenics, and hardware-level programming. I intend to continue
-                                my research journey, learning as much as I can.
+                            <div id="prev-pg-research-body-contents" class="flex flex-wrap justify-center flex-column tj h-full-vp shrink-grow-children overflow-x-hidden">
                             </div>
                         </div>
 
-                        <div class="flex justify-center mt2 tj">
-                            <!-- Col 1 -->
-                            <div class="w-40 mr2 z-1">
-                                <div class=""><span class="f1 fw6 ">Quantum Beats in Crystalline Rubrene</span></div>
-                                <div class="mb1"><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.056901"><span class="primary-link pointer">Paper</span></a></div>
-
-                                I work with a group of incredible people at <i>Lehigh University</i> under the watchful eye of Dr. Ivan Biaggio. We study
-                                quantum phenomena in crystalline rubrene, namely a phenomenon known as <span class="text-highlighter" id="highlight-1">quantum beats</span>. Rubrene exhibits interesting effects
-                                which are pretty unexpected. We are working to explain them.
-                                <br>&emsp;During this project, I have become familiar with physical vapour deposition, optical alignment, laser usage,
-                                real world applications of quantum mechanics, and photonics.
-                                <div class="mt1"><span class="f1 fw6">Slosh Measuring System for Liquid Carrying Robots</span></div>
-                                <div class="mb1"><a href="https://ieeexplore.ieee.org/document/10704044"><span class="primary-link pointer">Paper</span></a></div>
-
-                                At the <i>Singapore University of Technology and Design</i> I worked to develop a system to measure the influence of locomotion on
-                                liquids in omnidirectional robots. Then, I utilized <span class="text-highlighter" id="highlight-2">Delaunay Triangulation</span> and <span class="text-highlighter" id="highlight-3">cubic spline interpolation</span> to model the surface of the liquid
-                                using the experimental data.
-                                <br>&emsp; To achieve this goal, I wrote hardware-level code for communication between the microcontrollers and sensor devices, including the implementation of Serial, Bluetooth,
-                                and I2C protocols. Additionally, I created monitoring tools for real-time data collection and analysis.
+                        <div id="research" class="research-container">
+                            <div id="nav-research-buttons" class="flex justify-between">
+                                <div>
+                                    <button class="chevron-button research-back" value="-1" onclick="changePage(this)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M169.4 297.4C156.9 309.9 156.9 330.2 169.4 342.7L361.4 534.7C373.9 547.2 394.2 547.2 406.7 534.7C419.2 522.2 419.2 501.9 406.7 489.4L237.3 320L406.6 150.6C419.1 138.1 419.1 117.8 406.6 105.3C394.1 92.8 373.8 92.8 361.3 105.3L169.3 297.3z"/></svg></button>
+                                </div>
+                                <div>
+                                    <button class="chevron-button research-next" value="1" onclick="changePage(this)"><svg viewBox="0 0 640 640" width="100%" height="100%"><path d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg></button>
+                                </div>
                             </div>
 
-                            <!-- Col2 -->
-                            <div class="w-40 ml2">
-                                <img class="primary-br w-100" src="./assets/images/BlockDiagram.png" id="blockdiagram"/>
+                            <div id="title-and-abstract" class="title-visible">
+                                <div class="tc">
+                                    <div class="f2 fw6 mb15">Research</div>
+                                    <div class="f1">Luke Weaver</div>
+                                    <div><i>Department of Physics, Lehigh University, Bethlehem, PA 18015, USA</i> <br/>(Dated: <span id="abstract-date"></span>)</div>
+                                </div>
 
-                                <div class="mb1 mt1"><span class="f1 fw6">H6 Secondary Beamline Focusing at CERN</span></div>
-                                <div class="mb1"><a href="https://repository.cern/records/4y5jg-mv534"><span class="primary-link pointer">Paper</span></a></div>
+                                <div class="flex justify-center mt1">
+                                    <div class="w-70 tj">
+                                        &emsp;I have researched at several institutions including <i>Lehigh University</i>, the <i>Singapore University of Technology and Design</i>, and <i>CERN</i>. Consequently, I developed a broad array of
+                                        skills that are particularly useful in research, including data analysis, physical vapor deposition, optical alignment/laser usage, cryogenics, and hardware-level programming. I intend to continue
+                                        my research journey, learning as much as I can.
+                                    </div>
+                                </div>
+                            </div>
 
-                                <i>In Progress</i>
+                            <div id="research-body-contents" class="flex flex-wrap justify-center flex-column tj h-full-vp shrink-grow-children overflow-x-hidden">
+                                <!-- Col 1 -->
+                                <!-- <div class="w-40 mr2 z-1"> -->
+                                <div>
+                                    <div class=""><span class="f1 fw6 ">Quantum Beats in Crystalline Rubrene</span></div>
+                                    <div class="mb1">
+                                        <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.056901"><span class="primary-link pointer">Spin Coherence</span></a>,&nbsp;
+                                        <a href="https://doi.org/10.48550/arXiv.2507.23770"><span class="primary-link pointer">Transport-Induced Decoherence</span></a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    I work with a group of incredible people at <i>Lehigh University</i> under the watchful eye of Dr. Ivan Biaggio. We study
+                                    quantum phenomena in crystalline rubrene, namely a phenomenon known as <span class="text-highlighter" id="highlight-1">quantum beats</span>. Rubrene exhibits interesting effects
+                                    which are pretty unexpected. We are working to explain them.
+                                    <br>&emsp;During this project, I have become familiar with physical vapour deposition, optical alignment, laser usage,
+                                    real world applications of quantum mechanics, and photonics.
+                                </div>
+
+                                <div>
+                                    <div class="mt1"><span class="f1 fw6">Slosh Measuring System for Liquid Carrying Robots</span></div>
+                                    <div class="mb1"><a href="https://ieeexplore.ieee.org/document/10704044"><span class="primary-link pointer">Paper</span></a></div>
+                                </div>
+
+                                <div>
+                                    At the <i>Singapore University of Technology and Design</i> I worked to develop a system to measure the influence of locomotion on
+                                    liquids in omnidirectional robots. I utilized <span class="text-highlighter" id="highlight-2">Delaunay Triangulation</span> and <span class="text-highlighter" id="highlight-3">cubic spline interpolation</span> to model the surface of the liquid
+                                    using the experimental data.
+                                    <br>&emsp; To achieve this goal, I wrote hardware-level code for communication between the microcontrollers and sensor devices, including the implementation of Serial, Bluetooth,
+                                    and I2C protocols. Additionally, I created monitoring tools for real-time data collection and analysis.
+                                </div>
+
+                                <div>
+                                    <img class="primary-br w-100" src="./assets/images/BlockDiagram.png" id="blockdiagram-SUTD"/>
+                                </div>
+                                <!-- </div> -->
+
+                                <!-- Col2 -->
+                                <!-- <div class="w-40 ml2"> -->
+
+                                <div>
+                                    <div class="mt1"><span class="f1 fw6">H6 Secondary Beamline Focusing at CERN</span></div>
+                                    <div class="mb1"><a href="https://repository.cern/records/4y5jg-mv534"><span class="primary-link pointer">Paper</span></a></div>
+                                </div>
+
+                                <div>
+                                    At <i>CERN</i>, I worked in the Beams Department to characterize the H6 Secondary Beamline in the Experimental North Area (EHN1).
+                                    I used MAD-X, BDSIM, and ROOT in conjunction with C++ and Python. Using these analyses, I developed a plan for modifications to unused space in user zone PPE146 to both focus the
+                                    beam further and create two simultaneous foci.
+                                </div>
+                                <div>
+                                    In addition, I participated in the CERN Summer School, where I had introductory lectures in several different topics.
+                                    Moreover, I developed my abilities as a science communicator and presenter giving frequent updates on my project,
+                                    culminating in a summer end presentation.
+                                </div>
+
+                                <div>
+                                    <img class="primary-br w-100" src="./assets/images/schematic-drawing.png" id="blockdiagram-CERN"/>
+                                </div>
+
+
+                                <div>
+                                    <div class="mt1"><span class="f1 fw6">H6 Secondary Beamline Focusing at CERN</span></div>
+                                    <div class="mb1"><a href="https://repository.cern/records/4y5jg-mv534"><span class="primary-link pointer">Paper</span></a></div>
+                                </div>
+
+                                <div>
+                                    At <i>CERN</i>, I worked in the Beams Department to characterize the H6 Secondary Beamline in the Experimental North Area (EHN1).
+                                    I used MAD-X, BDSIM, and ROOT in conjunction with C++ and Python. Using these analyses, I developed a plan for modifications to unused space in user zone PPE146 to both focus the
+                                    beam further and create two simultaneous foci.
+                                </div>
+                                <div>
+                                    In addition, I participated in the CERN Summer School, where I had introductory lectures in several different topics.
+                                    Moreover, I developed my abilities as a science communicator and presenter giving frequent updates on my project,
+                                    culminating in a summer end presentation.
+                                </div>
+
+                                <div>
+                                    <img class="primary-br w-100" src="./assets/images/schematic-drawing.png" id="blockdiagram-CERN"/>
+                                </div>
+
+
+                                <div>
+                                    <div class="mt1"><span class="f1 fw6">H6 Secondary Beamline Focusing at CERN</span></div>
+                                    <div class="mb1"><a href="https://repository.cern/records/4y5jg-mv534"><span class="primary-link pointer">Paper</span></a></div>
+                                </div>
+
+                                <div>
+                                    At <i>CERN</i>, I worked in the Beams Department to characterize the H6 Secondary Beamline in the Experimental North Area (EHN1).
+                                    I used MAD-X, BDSIM, and ROOT in conjunction with C++ and Python. Using these analyses, I developed a plan for modifications to unused space in user zone PPE146 to both focus the
+                                    beam further and create two simultaneous foci.
+                                </div>
+                                <div>
+                                    In addition, I participated in the CERN Summer School, where I had introductory lectures in several different topics.
+                                    Moreover, I developed my abilities as a science communicator and presenter giving frequent updates on my project,
+                                    culminating in a summer end presentation.
+                                </div>
+
+                                <div>
+                                    <img class="primary-br w-100" src="./assets/images/schematic-drawing.png" id="blockdiagram-CERN"/>
+                                </div>
+
+
+                                <div>
+                                    <div class="mt1"><span class="f1 fw6">H6 Secondary Beamline Focusing at CERN</span></div>
+                                    <div class="mb1"><a href="https://repository.cern/records/4y5jg-mv534"><span class="primary-link pointer">Paper</span></a></div>
+                                </div>
+
+                                <div>
+                                    At <i>CERN</i>, I worked in the Beams Department to characterize the H6 Secondary Beamline in the Experimental North Area (EHN1).
+                                    I used MAD-X, BDSIM, and ROOT in conjunction with C++ and Python. Using these analyses, I developed a plan for modifications to unused space in user zone PPE146 to both focus the
+                                    beam further and create two simultaneous foci.
+                                </div>
+                                <div>
+                                    In addition, I participated in the CERN Summer School, where I had introductory lectures in several different topics.
+                                    Moreover, I developed my abilities as a science communicator and presenter giving frequent updates on my project,
+                                    culminating in a summer end presentation.
+                                </div>
+
+                                <div>
+                                    <img class="primary-br w-100" src="./assets/images/schematic-drawing.png" id="blockdiagram-CERN"/>
+                                </div>
+
+
+                                <div>
+                                    <div class="mt1"><span class="f1 fw6">H6 Secondary Beamline Focusing at CERN</span></div>
+                                    <div class="mb1"><a href="https://repository.cern/records/4y5jg-mv534"><span class="primary-link pointer">Paper</span></a></div>
+                                </div>
+
+                                <div>
+                                    At <i>CERN</i>, I worked in the Beams Department to characterize the H6 Secondary Beamline in the Experimental North Area (EHN1).
+                                    I used MAD-X, BDSIM, and ROOT in conjunction with C++ and Python. Using these analyses, I developed a plan for modifications to unused space in user zone PPE146 to both focus the
+                                    beam further and create two simultaneous foci.
+                                </div>
+                                <div>
+                                    In addition, I participated in the CERN Summer School, where I had introductory lectures in several different topics.
+                                    Moreover, I developed my abilities as a science communicator and presenter giving frequent updates on my project,
+                                    culminating in a summer end presentation.
+                                </div>
+
+                                <div>
+                                    <img class="primary-br w-100" src="./assets/images/schematic-drawing.png" id="blockdiagram-CERN"/>
+                                </div>
+
                             </div>
                         </div>
 

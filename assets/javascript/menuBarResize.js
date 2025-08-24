@@ -71,6 +71,6 @@ function addClickEventListeners() {
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
-  addClickEventListeners();
-  menuBarPhone();
+  // addClickEventListeners();
+  // menuBarPhone();
 });

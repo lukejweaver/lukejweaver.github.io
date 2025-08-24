@@ -19,8 +19,77 @@ a {
 }
 
 .research-container {
-  padding: 2rem;
+  padding: 4vh;
   box-shadow: rgb(173, 173, 173) 0px 1px 5px;
+  height: 100%;
+  background: white;
+  width: 100%;
+  z-index: 3;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+  .title-visible + #research-body-contents {
+    margin-top: 0.5rem;
+  }
+
+  #research-body-contents {
+    height: 100%;
+
+    > div {
+      width: 40%;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 800px) {
+      > div {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+.research-prev-page {
+  position: absolute;
+  top: 0rem;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 4vh;
+  box-shadow: rgb(173, 173, 173) 0px 1px 5px;
+  display: none;
+  z-index: -1;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+  .title-visible + #prev-pg-research-body-contents {
+    margin-top: 0.5rem;
+  }
+
+  #prev-pg-research-body-contents {
+    height: 100%;
+
+    > div {
+      width: 40%;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 800px) {
+      > div {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.research-height {
+  height: 100vh;
+  position: relative;
 }
 
 /* coords */
@@ -697,6 +766,10 @@ a {
 	padding-top: 0;
 }
 
+.pt2 {
+  padding-top: 2rem;
+}
+
 .bg-primary-color {
 	background-color: #293241;
 }
@@ -727,6 +800,14 @@ a {
 
 .flex-column {
 	flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.shrink-grow-children > * {
+  flex: 1 1 auto;
 }
 
 .primary-br {
@@ -851,6 +932,10 @@ a {
 	justify-content: space-around;
 }
 
+.justify-between {
+	justify-content: space-between;
+}
+
 .justify-end {
   justify-content: end;
 }
@@ -903,6 +988,39 @@ a {
 
 .primary-link:hover > .right-arrow-container > svg, .primary-link-large:hover > .right-arrow-container > svg {
   animation: grow-vertically-flip 0.2s 1;
+}
+
+.chevron-button {
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  padding: 0.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.15s;
+  border-radius: 100rem;
+  fill: rgb(54, 54, 54);
+
+  svg {
+    transition: all 0.15s;
+    animation: grow-vertically-flip 0.2s 1;
+  }
+
+  &:hover {
+    box-shadow: rgb(173, 173, 173) 0px 1px 5px;
+
+    svg {
+      size: 1rem;
+      animation: shrink-vertically-flip 0.2s 1;
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+  }
 }
 
 .primary-button {
@@ -1248,6 +1366,12 @@ a {
 	}
 }
 
+@media (prefers-reduced-motion: no-preference) {
+	.shuffle {
+    animation: shuffle 1.2s 1;
+	}
+}
+
 
 @keyframes enter-bottom {
 	0% {
@@ -1257,6 +1381,19 @@ a {
 	100% {
 		transform: translateY(0rem);
     opacity: 100%;
+	}
+}
+
+
+@keyframes shuffle {
+	0% {
+		transform: translateX(0vw) translateY(1vh);
+	}
+  20% {
+		transform: translateX(35vw) translateY(-10vh) rotate(5deg);
+	}
+	100% {
+		transform: translateY(0px);
 	}
 }
 
