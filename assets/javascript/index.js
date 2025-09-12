@@ -25,6 +25,7 @@ let currentPage = "1";
 let pageData = {};
 
 let titleAbstract = null;
+let titleAbstractHeight = 0;
 let researchContainer = null;
 let maxHeight = null;
 let childrenArray = null;
@@ -90,6 +91,7 @@ function addCorrectDate() {
 function addResearchHandler() {
   setTimeout(() => {
     titleAbstract = document.getElementById("title-and-abstract");
+    titleAbstractHeight = titleAbstract.offsetHeight;
     researchContainer = document.getElementById("research-body-contents");
     let compResearchStyle = getComputedStyle(researchContainer);
     navResButtons = document.getElementById("nav-research-buttons");
@@ -120,7 +122,7 @@ function addResearchHandler() {
     console.log(runningHeight);
     while (endingChildIndex < (childrenArray.length)) {
       while (runningHeight < workingHeight) {
-        if ((runningHeight + childrenHeightArray[endingChildIndex]) > workingHeight || endingChildIndex == (childrenArray.length)) {
+        if (((runningHeight + childrenHeightArray[endingChildIndex]) > workingHeight && runningHeight != 0) || endingChildIndex == (childrenArray.length)) {
           console.log("break");
           console.log(runningHeight + childrenHeightArray[endingChildIndex]);
           console.log(workingHeight);
@@ -253,14 +255,13 @@ function displayResearchPage() {
     prevPageContents.replaceChildren(...pageData[currentPage]);
     if (currentPage == "1") {
       previousPage.insertBefore(titleAbstract, prevPageContents);
-      let heightOfContents = maxHeight - titleAbstract.offsetHeight;
+      let heightOfContents = maxHeight - titleAbstractHeight;
       prevPageContents.setAttribute("style",`height:${heightOfContents}px`);
     } else {
       prevPageContents.setAttribute("style",`height:${maxHeight}px`);
     }
     researchContainer.style.display = 'none';
     researchContainer.classList.add('shuffle');
-
 
     setTimeout(() => {
       researchContainer.style.display = 'block';

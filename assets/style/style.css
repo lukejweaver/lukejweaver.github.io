@@ -1025,12 +1025,12 @@ a {
 
 .primary-button {
   font-weight: 600;
-    color: black;
+    color: white;
     display: inline-block;
     border: none;
     padding: 0.5rem;
     text-decoration: none;
-    background-color: #eec643ff;
+    background-color: #293241;
     border-radius: 0.4rem;
     font-family: sans-serif;
     font-size: 1rem;
@@ -1042,7 +1042,7 @@ a {
   }
 
   .primary-button:hover {
-    background-color: #ffd754ff;
+    background-color: #455670;
   }
 
 .primary-link-large {
