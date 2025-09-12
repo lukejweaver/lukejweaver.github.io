@@ -1,0 +1,534 @@
+@property --secondary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #F2FBE0;
+}
+
+@property --primary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #34435E;
+}
+
+@property --accent-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #E57A44;
+}
+
+@property --shadow-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #343434;
+}
+
+/* Element Styles */
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    margin: 0 !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+hr {
+    display: block;
+    border: 0;
+    border-top: 2px solid var(--accent-color);
+    padding: 0;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+/* Container Styles */
+
+.content-container {
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+.title-container {
+    background: var(--secondary-color);
+    border-radius: 0rem 0rem 1rem 1rem;
+    box-shadow: 0px 1px 10px var(--shadow-color);
+    width: 100%;
+}
+
+.footer-container {
+    overflow: auto;
+    background: var(--secondary-color);
+    border-radius: 1rem 1rem 0rem 0rem;
+    box-shadow: 0px 1px 10px var(--shadow-color);
+    width: 100%;
+}
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  border-style: solid;
+  border-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  /* padding: .5rem; */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+
+  > div {
+    width: 80%;
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    padding: .2rem;
+    background-color: black;
+    margin: 0.5rem;
+    background-color: #35538c;
+    border-radius: .5rem;
+    text-align: center;
+    max-width: 25rem;
+
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+  }
+}
+
+.solutions-container {
+  > div {
+    width: 50%;
+    background-color: #35538c;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+}
+
+.journal {
+  width: 28%;
+  aspect-ratio: 0.75;
+  border-left-width: 1.5rem;
+  border-left-color: black;
+  border-left-style: solid;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-image: url("../images/composition_mask_1.png");
+  /* background-repeat: no-repeat; */
+  transition: 0.150s;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* Bespoke classes */
+
+.headshot {
+    width: 30%;
+    height: 30%;
+    border-radius: 1rem;
+}
+
+.title-link {
+    width: 100%;
+    text-align: center;
+    border-radius: 0.7rem;
+    padding: 0.2rem;
+    transition: all 0.15s;
+    height: 100%;
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+}
+
+div:has(>.chevron-right):hover {
+
+    > div {
+        animation: 0.1s infinite alternate wiggle;
+    }
+
+    > .chevron-right{
+        transform: translateX(0.2rem);
+    }
+}
+
+.chevron-right {
+    stroke: var(--secondary-color);
+    width: 1rem;
+    height: 1rem;
+    transition: all 0.2s;
+}
+
+.download-svg {
+    stroke: var(--secondary-color);
+    width: 1rem;
+    transition: all 0.2s;
+    text-align: end;
+}
+
+.friend-link{
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  &:hover {
+    animation: 0.15s infinite alternate shiver;
+  }
+}
+
+
+.loading-dots {
+    :nth-child(even) {
+        animation: 1s infinite bump;
+        animation-delay: .33s;
+    }
+
+    :nth-child(1) {
+        animation: 1s infinite bump;
+    }
+
+    :nth-child(3) {
+        animation: 1s infinite bump;
+        animation-delay: 0.66s;
+    }
+}
+
+.grow-in {
+    animation: 0.15s 1 grow;
+}
+
+.compress-out {
+    animation: 0.15s 1 reverse compress;
+    animation-fill-mode: forwards;
+}
+
+.small-name {
+  overflow: hidden;
+  transition: height 0.15s;
+}
+
+#expansionDots {
+  position: relative;
+  /* padding-top: .15em;
+  padding-left: .2em;
+  padding-right: .2em;
+  padding-bottom: .25em; */
+  width: 1.8rem;
+  height: 1.8rem;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-style: solid;
+  border-radius: 20rem;
+  text-align: center;
+  margin-left: 0.5rem;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0px 0px 5px var(--shadow-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+  > div {
+    /* In JS I need to make it flex and flex-dir column (prob not actually) */
+    top: calc(100% + 0.3rem);
+    right: calc(100% - 2rem);
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 10rem;
+    /* height: 10rem; */
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px var(--shadow-color);
+    border-style: solid;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: 0.2s;
+    display: none;
+    flex-direction: column;
+  }
+}
+
+/* General Classes */
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.bg-primary-color {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary-color);
+}
+
+.bg-accent-color {
+    background-color: var(--accent-color);
+}
+
+.bg-lightened-primary {
+  background-color: #35538c;
+}
+
+.b--accent-color {
+  border-color: var(--accent-color);
+}
+
+.b--primary-color {
+  border-color: var(--primary-color);
+}
+
+.b--secondary-color {
+  border-color: var(--secondary-color);
+}
+
+.content-border {
+    border-style: solid;
+    border-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+.border-box {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover > .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.tooltip-container > .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 10em;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: .4em;
+  border-radius: 6px;
+  position: absolute;
+  text-wrap: wrap;
+  bottom: calc(100% + 8px);
+  right: calc(50% - 5.4em);
+  z-index: 1;
+  height: auto;
+  transition: opacity 0.15s;
+
+  &:before {
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+
+    border-top: 8px solid black;
+    border-bottom: 8px solid transparent;
+    border-right:8px solid transparent;
+    border-left:8px solid transparent;
+    left: calc(5.4em - 8px);
+
+    bottom: -15px;
+  }
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: transparent;
+  padding: .6rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+
+  > svg {
+    stroke-width: .13rem;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+
+    > svg {
+      stroke: var(--primary-color);
+    }
+  }
+}
+
+.secondary-button {
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: transparent;
+  padding: .6rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+
+  > svg {
+    stroke-width: .13rem;
+    stroke: var(--primary-color);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+
+/* Following mobile first development. Everything is for phones by default and then
+    we capture all other devices as we go up! */
+/* Im aiming to only need to design for phone and computer, tablet should be fine */
+@media (min-width: 800px) {
+    /* Anything other than a phone */
+
+    .content-container {
+      max-width: 60rem;
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+    }
+
+    .mt0ns {
+      margin-top: 0;
+    }
+
+    .title-link {
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
+    }
+
+    .headshot {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .nav-link-container {
+      max-height: 1.9em;
+      width: 100%;
+    }
+}
+
+/* Animations */
+
+@keyframes wiggle {
+  from {
+    transform: rotate(10deg);
+  }
+
+  to {
+    transform: rotate(-11deg);
+  }
+}
+
+@keyframes shiver {
+  from {
+    transform: translateX(-5%);
+  }
+
+  to {
+    transform: translateX(5%);
+  }
+}
+
+@keyframes bump {
+  0% {
+    transform: translateY(0%);
+  }
+
+  16% {
+    transform: translateY(-25%);
+  }
+
+  33% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes compress {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
