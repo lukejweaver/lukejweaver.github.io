@@ -78,6 +78,7 @@ p {
     border-radius: 0rem 0rem 1rem 1rem;
     box-shadow: 0px 1px 10px var(--shadow-color);
     width: 100%;
+    z-index: 1;
 }
 
 .footer-container {
